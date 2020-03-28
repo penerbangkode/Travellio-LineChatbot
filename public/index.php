@@ -95,7 +95,7 @@ $app->get('/multicast', function($req, $response) use ($bot)
     // list of users
     $userList = [
         'U7d3eeaa45810350d98ab265aeb5ab408',
-        'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+        'U09b114f06c3918e86c541686d276d364',
         'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
         'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
         'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'];
