@@ -78,6 +78,7 @@ if(is_array($data['events'])){
                     ->withHeader('Content-Type', 'application/json')
                     ->withStatus($result->getHTTPStatus());
             }
+        }
             //Content api
             elseif (
                 $event['message']['type'] == 'image' or
@@ -113,7 +114,8 @@ if(is_array($data['events'])){
                         ->withHeader('Content-Type', 'application/json')
                         ->withStatus($result->getHTTPStatus());
                 }
-            } else {
+            } 
+            else {
                 //message from single user
                 $result = $bot->replyText($event['replyToken'], $event['message']['text']);
                 $response->getBody()->write((string)$result->getJSONDecodedBody());
@@ -123,7 +125,7 @@ if(is_array($data['events'])){
             }
         }
     }
-}
+
  
 });
 $app->get('/pushmessage', function ($req, $response) use ($bot) {
