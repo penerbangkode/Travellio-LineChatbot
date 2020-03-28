@@ -1,0 +1,116 @@
+{
+    "type": "bubble",
+    "body": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "text",
+          "text": "Help",
+          "size": "3xl"
+        },
+        {
+          "type": "separator",
+          "margin": "md"
+        },
+        {
+          "type": "text",
+          "text": "List command / prefix untuk ",
+          "margin": "xl"
+        },
+        {
+          "type": "text",
+          "text": "berinteraksi dengan bot :"
+        },
+        {
+          "type": "text",
+          "text": "1. Menu",
+          "margin": "lg",
+          "weight": "bold"
+        },
+        {
+          "type": "text",
+          "text": "Keterangan : Untuk menampilkan"
+        },
+        {
+          "type": "text",
+          "text": "semua list dari jenis pulau yang",
+          "margin": "none"
+        },
+        {
+          "type": "text",
+          "text": " bisa dikunjungi"
+        },
+        {
+          "type": "text",
+          "text": "1. About",
+          "margin": "lg",
+          "weight": "bold"
+        },
+        {
+          "type": "text",
+          "text": "Keterangan : Untuk menampilkan"
+        },
+        {
+          "type": "text",
+          "text": "Data tentang kami",
+          "margin": "none"
+        },
+        {
+          "type": "text",
+          "text": "1. Help",
+          "margin": "lg",
+          "weight": "bold"
+        },
+        {
+          "type": "text",
+          "text": "Keterangan : Untuk menampilkan"
+        },
+        {
+          "type": "text",
+          "text": "Keyword yang bisa digunakan",
+          "margin": "none"
+        },
+        {
+          "type": "text",
+          "text": "agar bisa berinteraksi"
+        },
+        {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "filler"
+            },
+            {
+              "type": "text",
+              "text": "Open Website",
+              "margin": "none",
+              "weight": "regular",
+              "style": "normal",
+              "decoration": "none",
+              "align": "center",
+              "size": "md",
+              "color": "#ffffff"
+            },
+            {
+              "type": "filler"
+            }
+          ],
+          "spacing": "none",
+          "margin": "xxl",
+          "backgroundColor": "#5cb85c",
+          "cornerRadius": "4px",
+          "height": "40px",
+          "action": {
+            "type": "uri",
+            "label": "Web",
+            "uri": "https://travellio.herokuapp.com/",
+            "altUri": {
+              "desktop": "https://travellio.herokuapp.com/"
+            }
+          }
+        }
+      ]
+    }
+  }

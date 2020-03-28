@@ -199,7 +199,7 @@
                   "contents": [
                     {
                       "type": "text",
-                      "text": "Cara Pemesanan",
+                      "text": "Help",
                       "size": "xl",
                       "color": "#ffffff",
                       "weight": "bold"
@@ -245,8 +245,8 @@
                   "backgroundColor": "#5cb85c",
                   "action": {
                     "type": "message",
-                    "label": "Book",
-                    "text": "Book"
+                    "label": "help",
+                    "text": "help"
                   }
                 }
               ],
