@@ -58,27 +58,34 @@ if(is_array($data['events'])){
     {
         if ($event['type'] == 'message')
         {
-            if($event['message']['type'] == 'text')
-            {
+                 //group room
+                 if (
+                    $event['source']['type'] == 'group' or
+                    $event['source']['type'] == 'room'
+                ) {
+                    //message from group / room
+                    if ($event['source']['userId']) {
                 
-
-
-
-                // send same message as reply to user
-                $result = $bot->replyText($event['replyToken'], $event['message']['text']);
- 
- 
-                // or we can use replyMessage() instead to send reply message
-                // $textMessageBuilder = new TextMessageBuilder($event['message']['text']);
-                // $result = $bot->replyMessage($event['replyToken'], $textMessageBuilder);
- 
- 
-                $response->getBody()->write(json_encode($result->getJSONDecodedBody()));
-                return $response
-                    ->withHeader('Content-Type', 'application/json')
-                    ->withStatus($result->getHTTPStatus());
-            }
-        
+                        $userId = $event['source']['userId'];
+                        $getprofile = $bot->getProfile($userId);
+                        $profile = $getprofile->getJSONDecodedBody();
+                        $greetings = new TextMessageBuilder("Halo, " . $profile['displayName']);
+                
+                        $result = $bot->replyMessage($event['replyToken'], $greetings);
+                        $response->getBody()->write(json_encode($result->getJSONDecodedBody()));
+                        return $response
+                            ->withHeader('Content-Type', 'application/json')
+                            ->withStatus($result->getHTTPStatus());
+                    }
+                    else {
+                        //message from single user
+                        $result = $bot->replyText($event['replyToken'], $event['message']['text']);
+                        $response->getBody()->write((string)$result->getJSONDecodedBody());
+                        return $response
+                            ->withHeader('Content-Type', 'application/json')
+                            ->withStatus($result->getHTTPStatus());
+                    }
+                } 
             //Content api
             elseif (
                 $event['message']['type'] == 'image' or
@@ -95,34 +102,7 @@ if(is_array($data['events'])){
                     ->withHeader('Content-Type', 'application/json')
                     ->withStatus($result->getHTTPStatus());
             } 
-            //group room
-            elseif (
-                $event['source']['type'] == 'group' or
-                $event['source']['type'] == 'room'
-            ) {
-                //message from group / room
-                if ($event['source']['userId']) {
             
-                    $userId = $event['source']['userId'];
-                    $getprofile = $bot->getProfile($userId);
-                    $profile = $getprofile->getJSONDecodedBody();
-                    $greetings = new TextMessageBuilder("Halo, " . $profile['displayName']);
-            
-                    $result = $bot->replyMessage($event['replyToken'], $greetings);
-                    $response->getBody()->write(json_encode($result->getJSONDecodedBody()));
-                    return $response
-                        ->withHeader('Content-Type', 'application/json')
-                        ->withStatus($result->getHTTPStatus());
-                }
-            } 
-            else {
-                //message from single user
-                $result = $bot->replyText($event['replyToken'], $event['message']['text']);
-                $response->getBody()->write((string)$result->getJSONDecodedBody());
-                return $response
-                    ->withHeader('Content-Type', 'application/json')
-                    ->withStatus($result->getHTTPStatus());
-            }
         }
     }
   }
