@@ -1,0 +1,87 @@
+{
+    "type": "bubble",
+    "body": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "text",
+          "text": "About",
+          "size": "3xl"
+        },
+        {
+          "type": "separator",
+          "margin": "md"
+        },
+        {
+          "type": "image",
+          "url": "https://i.ibb.co/vm3NRDk/download-waifu2x-art-noise3-tta-1-waifu2x-art-noise3-tta-1.png",
+          "size": "full"
+        },
+        {
+          "type": "text",
+          "text": "Travellio, adalah website untuk "
+        },
+        {
+          "type": "text",
+          "text": "memesan perjalanan ke Pulau"
+        },
+        {
+          "type": "text",
+          "text": " Seribu dengan harga yang sangat"
+        },
+        {
+          "type": "text",
+          "text": " terjangkau dan bisa di negosisasi."
+        },
+        {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "filler"
+            },
+            {
+              "type": "text",
+              "text": "Open Website",
+              "margin": "none",
+              "weight": "regular",
+              "style": "normal",
+              "decoration": "none",
+              "align": "center",
+              "size": "md",
+              "color": "#ffffff"
+            },
+            {
+              "type": "filler"
+            }
+          ],
+          "spacing": "none",
+          "margin": "xxl",
+          "backgroundColor": "#5cb85c",
+          "cornerRadius": "4px",
+          "height": "40px",
+          "action": {
+            "type": "uri",
+            "label": "Web",
+            "uri": "https://travellio.herokuapp.com/",
+            "altUri": {
+              "desktop": "https://travellio.herokuapp.com/"
+            }
+          }
+        },
+        {
+          "type": "text",
+          "text": "Menu",
+          "margin": "md",
+          "align": "center",
+          "color": "#5bc0de",
+          "action": {
+            "type": "message",
+            "label": "Menu",
+            "text": "Menu"
+          }
+        }
+      ]
+    }
+  }
