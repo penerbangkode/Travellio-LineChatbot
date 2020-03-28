@@ -75,13 +75,15 @@ if(is_array($data['events'])){
                         
                         if (strtolower($event['message']['text'] == 'Halo' || 'Selamat' || 'Pagi' || 'Hello')) {
                             $greetings = new TextMessageBuilder("Halo, " . $profile['displayName'] ."");
+                            $result = $bot->replyMessage($event['replyToken'], $greetings);
+
+                            $response->getBody()->write(json_encode($result->getJSONDecodedBody()));
+                            return $response
+                                ->withHeader('Content-Type', 'application/json')
+                                ->withStatus($result->getHTTPStatus());
                         }
                  
-                        $result = $bot->replyMessage($event['replyToken'], $greetings);
-                        $response->getBody()->write(json_encode($result->getJSONDecodedBody()));
-                        return $response
-                            ->withHeader('Content-Type', 'application/json')
-                            ->withStatus($result->getHTTPStatus());
+                        
                     }        
                    } else {
                     //message from single user
