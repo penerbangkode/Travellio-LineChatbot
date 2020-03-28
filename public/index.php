@@ -85,10 +85,11 @@ if(is_array($data['events'])){
                                     ]
                                 ],
                             ]);
+                        $dataall = $greetings . $txt_jls;
 
                             
                  
-                        $result = $bot->replyMessage($event['replyToken'], $greetings, $txt_jls);
+                        $result = $bot->replyMessage($event['replyToken'], $dataall);
                         $response->getBody()->write(json_encode($result->getJSONDecodedBody()));
                         return $response
                             ->withHeader('Content-Type', 'application/json')
