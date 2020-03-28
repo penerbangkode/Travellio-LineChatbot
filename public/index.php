@@ -117,6 +117,36 @@ if(is_array($data['events'])){
                             ],
                         ]);
                     }
+                    elseif (strtolower($event['message']['text']) == "Help") {
+     
+                        $flexTemplate = file_get_contents("../help.json"); // template flex message
+                        $result = $httpClient->post(LINEBot::DEFAULT_ENDPOINT_BASE . '/v2/bot/message/reply', [
+                            'replyToken' => $event['replyToken'],
+                            'messages'   => [
+                                [
+                                    'type'     => 'flex',
+                                    'altText'  => 'Hey, look at this menu, and how are you?',
+                                    'contents' => json_decode($flexTemplate)
+                                ]
+                            ],
+                        ]);
+                    }
+                    //Content api
+                    elseif (
+                        $event['message']['type'] == 'image' or
+                        $event['message']['type'] == 'video' or
+                        $event['message']['type'] == 'audio' or
+                        $event['message']['type'] == 'file'
+                    ) {
+                        $contentURL = " https://bot-lasy.herokuapp.com/public/content/" . $event['message']['id'];
+                        $contentType = ucfirst($event['message']['type']);
+                        $result = $bot->replyText($event['replyToken'],
+                            $contentType . " yang Anda kirim bisa diakses dari link:\n " . $contentURL);
+                        $response->getBody()->write(json_encode($result->getJSONDecodedBody()));
+                        return $response
+                            ->withHeader('Content-Type', 'application/json')
+                            ->withStatus($result->getHTTPStatus());
+                    } 
                     else {
                         // send same message as reply to user
                         $result = $bot->replyText($event['replyToken'], $event['message']['text']);
@@ -130,36 +160,8 @@ if(is_array($data['events'])){
             
                 }
             }   
-            elseif (strtolower($event['message']['text']) == "Help") {
-     
-                $flexTemplate = file_get_contents("../help.json"); // template flex message
-                $result = $httpClient->post(LINEBot::DEFAULT_ENDPOINT_BASE . '/v2/bot/message/reply', [
-                    'replyToken' => $event['replyToken'],
-                    'messages'   => [
-                        [
-                            'type'     => 'flex',
-                            'altText'  => 'Hey, look at this menu, and how are you?',
-                            'contents' => json_decode($flexTemplate)
-                        ]
-                    ],
-                ]);
-            }
-            //Content api
-            elseif (
-                $event['message']['type'] == 'image' or
-                $event['message']['type'] == 'video' or
-                $event['message']['type'] == 'audio' or
-                $event['message']['type'] == 'file'
-            ) {
-                $contentURL = " https://bot-lasy.herokuapp.com/public/content/" . $event['message']['id'];
-                $contentType = ucfirst($event['message']['type']);
-                $result = $bot->replyText($event['replyToken'],
-                    $contentType . " yang Anda kirim bisa diakses dari link:\n " . $contentURL);
-                $response->getBody()->write(json_encode($result->getJSONDecodedBody()));
-                return $response
-                    ->withHeader('Content-Type', 'application/json')
-                    ->withStatus($result->getHTTPStatus());
-            } 
+         
+ 
        
         } 
         
