@@ -103,10 +103,10 @@ if(is_array($data['events'])){
                                 ],
                             ]);
      
-                        } else {
-                            // send same message as reply to user
-                            $result = $bot->replyText($event['replyToken'], $event['message']['text']);
-                        }
+                    } else {
+                        // send same message as reply to user
+                        $result = $bot->replyText($event['replyToken'], $event['message']['text']);
+                    }
                     $result = $bot->replyText($event['replyToken'], $event['message']['text']);
                     $response->getBody()->write((string)$result->getJSONDecodedBody());
                     return $response
