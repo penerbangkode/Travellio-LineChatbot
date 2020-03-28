@@ -165,7 +165,7 @@ if(is_array($data['events'])){
                     } 
                     else {
                         // send same message as reply to user
-                        $greetings = new TextMessageBuilder("Halo, " . $profile['displayName'] ." "."Jika ada pertanyaan seputar pejalanan, bisa chat disini atau langsung kunjungi web site nya, Mari mulai dengan mengetik Help");
+                        $greetings = new TextMessageBuilder("Halo, Sepertinya aku belum dilatih untuk mengerti hal itu. mohon maaf tetapi,"." "."Jika ada pertanyaan seputar pejalanan, bisa chat disini atau langsung kunjungi web site nya, Mari mulai dengan mengetik Help");
                         
                         
 
