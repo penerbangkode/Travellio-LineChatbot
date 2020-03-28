@@ -9,7 +9,7 @@
           "contents": [
             {
               "type": "image",
-              "url": "https://scdn.line-apps.com/n/channel_devcenter/img/flexsnapshot/clip/clip1.jpg",
+              "url": "https://i.ibb.co/jgwZrpk/Main.png",
               "size": "full",
               "aspectMode": "cover",
               "aspectRatio": "2:3",
@@ -25,7 +25,7 @@
                   "contents": [
                     {
                       "type": "text",
-                      "text": "Menu",
+                      "text": "Menu Pulau",
                       "size": "xl",
                       "color": "#ffffff",
                       "weight": "bold"
@@ -68,14 +68,19 @@
                   "spacing": "sm",
                   "margin": "xxl",
                   "height": "40px",
-                  "backgroundColor": "#5cb85c"
+                  "backgroundColor": "#5cb85c",
+                  "action": {
+                    "type": "message",
+                    "label": "Menu",
+                    "text": "List"
+                  }
                 }
               ],
               "position": "absolute",
               "offsetBottom": "0px",
               "offsetStart": "0px",
               "offsetEnd": "0px",
-              "backgroundColor": "#03303Acc",
+              "backgroundColor": "#0f4c8150",
               "paddingAll": "20px",
               "paddingTop": "18px"
             }
@@ -91,7 +96,7 @@
           "contents": [
             {
               "type": "image",
-              "url": "https://scdn.line-apps.com/n/channel_devcenter/img/flexsnapshot/clip/clip2.jpg",
+              "url": "https://i.ibb.co/pjqvZQ8/Main2.png",
               "size": "full",
               "aspectMode": "cover",
               "aspectRatio": "2:3",
@@ -107,35 +112,12 @@
                   "contents": [
                     {
                       "type": "text",
-                      "text": "Cony's T-shirts",
+                      "text": "About",
                       "size": "xl",
                       "color": "#ffffff",
                       "weight": "bold"
                     }
                   ]
-                },
-                {
-                  "type": "box",
-                  "layout": "baseline",
-                  "contents": [
-                    {
-                      "type": "text",
-                      "text": "¥35,800",
-                      "color": "#ebebeb",
-                      "size": "sm",
-                      "flex": 0
-                    },
-                    {
-                      "type": "text",
-                      "text": "¥75,000",
-                      "color": "#ffffffcc",
-                      "decoration": "line-through",
-                      "gravity": "bottom",
-                      "flex": 0,
-                      "size": "sm"
-                    }
-                  ],
-                  "spacing": "lg"
                 },
                 {
                   "type": "box",
@@ -152,12 +134,8 @@
                           "type": "filler"
                         },
                         {
-                          "type": "icon",
-                          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/flexsnapshot/clip/clip14.png"
-                        },
-                        {
                           "type": "text",
-                          "text": "Add to cart",
+                          "text": "Go",
                           "color": "#ffffff",
                           "flex": 0,
                           "offsetTop": "-2px"
@@ -175,39 +153,110 @@
                   "borderWidth": "1px",
                   "cornerRadius": "4px",
                   "spacing": "sm",
-                  "borderColor": "#ffffff",
                   "margin": "xxl",
-                  "height": "40px"
+                  "height": "40px",
+                  "backgroundColor": "#5cb85c",
+                  "action": {
+                    "type": "message",
+                    "label": "About",
+                    "text": "About"
+                  }
                 }
               ],
               "position": "absolute",
               "offsetBottom": "0px",
               "offsetStart": "0px",
               "offsetEnd": "0px",
-              "backgroundColor": "#9C8E7Ecc",
+              "backgroundColor": "#0f4c8150",
               "paddingAll": "20px",
               "paddingTop": "18px"
+            }
+          ],
+          "paddingAll": "0px"
+        }
+      },
+      {
+        "type": "bubble",
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "image",
+              "url": "https://i.ibb.co/kMCZHgq/Main3.png",
+              "size": "full",
+              "aspectMode": "cover",
+              "aspectRatio": "2:3",
+              "gravity": "top"
             },
             {
               "type": "box",
               "layout": "vertical",
               "contents": [
                 {
-                  "type": "text",
-                  "text": "SALE",
-                  "color": "#ffffff",
-                  "align": "center",
-                  "size": "xs",
-                  "offsetTop": "3px"
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "Cara Pemesanan",
+                      "size": "xl",
+                      "color": "#ffffff",
+                      "weight": "bold"
+                    }
+                  ]
+                },
+                {
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": [
+                    {
+                      "type": "filler"
+                    },
+                    {
+                      "type": "box",
+                      "layout": "baseline",
+                      "contents": [
+                        {
+                          "type": "filler"
+                        },
+                        {
+                          "type": "text",
+                          "text": "Go",
+                          "color": "#ffffff",
+                          "flex": 0,
+                          "offsetTop": "-2px"
+                        },
+                        {
+                          "type": "filler"
+                        }
+                      ],
+                      "spacing": "sm"
+                    },
+                    {
+                      "type": "filler"
+                    }
+                  ],
+                  "borderWidth": "1px",
+                  "cornerRadius": "4px",
+                  "spacing": "sm",
+                  "margin": "xxl",
+                  "height": "40px",
+                  "backgroundColor": "#5cb85c",
+                  "action": {
+                    "type": "message",
+                    "label": "Book",
+                    "text": "Book"
+                  }
                 }
               ],
               "position": "absolute",
-              "cornerRadius": "20px",
-              "offsetTop": "18px",
-              "backgroundColor": "#ff334b",
-              "offsetStart": "18px",
-              "height": "25px",
-              "width": "53px"
+              "offsetBottom": "0px",
+              "offsetStart": "0px",
+              "offsetEnd": "0px",
+              "backgroundColor": "#0f4c8150",
+              "paddingAll": "20px",
+              "paddingTop": "18px"
             }
           ],
           "paddingAll": "0px"
