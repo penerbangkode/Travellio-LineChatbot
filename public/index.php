@@ -72,18 +72,27 @@ if(is_array($data['events'])){
                         $userId = $event['source']['userId'];
                         $getprofile = $bot->getProfile($userId);
                         $profile = $getprofile->getJSONDecodedBody();
-                        
-                        if (strtolower($event['message']['text'] == 'halo' || 'selamat' || 'pagi' || 'hello')) {
-                            $greetings = new TextMessageBuilder("Halo, " . $profile['displayName'] ."");
-                            $result = $bot->replyMessage($event['replyToken'], $greetings);
+                        $greetings = new TextMessageBuilder("Halo, " . $profile['displayName'] ."Jika ada pertanyaan seputar pejalanan, bisa chat disini atau langsung kunjungi web site nya");
+                        $txt_jls = 
+                            $flexTemplate = file_get_contents("../about.json"); // template flex message
+                            $result = $httpClient->post(LINEBot::DEFAULT_ENDPOINT_BASE . '/v2/bot/message/reply', [
+                                'replyToken' => $event['replyToken'],
+                                'messages'   => [
+                                    [
+                                        'type'     => 'flex',
+                                        'altText'  => 'What can I do for you?',
+                                        'contents' => json_decode($flexTemplate)
+                                    ]
+                                ],
+                            ]);
 
-                            $response->getBody()->write(json_encode($result->getJSONDecodedBody()));
-                            return $response
-                                ->withHeader('Content-Type', 'application/json')
-                                ->withStatus($result->getHTTPStatus());
-                        }
+                            
                  
-                        
+                        $result = $bot->replyMessage($event['replyToken'], $greetings, $txt_jls);
+                        $response->getBody()->write(json_encode($result->getJSONDecodedBody()));
+                        return $response
+                            ->withHeader('Content-Type', 'application/json')
+                            ->withStatus($result->getHTTPStatus());
                     }        
                    } else {
                     //message from single user
