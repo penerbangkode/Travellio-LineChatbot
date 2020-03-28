@@ -58,34 +58,41 @@ if(is_array($data['events'])){
     {
         if ($event['type'] == 'message')
         {
-                 //group room
-                 if (
+            
+            if ($event['type'] == 'message')
+            {
+                  
+     
+                   //group room
+                if(
                     $event['source']['type'] == 'group' or
                     $event['source']['type'] == 'room'
                 ) {
                     //message from group / room
                     if ($event['source']['userId']) {
-                
+                 
                         $userId = $event['source']['userId'];
                         $getprofile = $bot->getProfile($userId);
                         $profile = $getprofile->getJSONDecodedBody();
                         $greetings = new TextMessageBuilder("Halo, " . $profile['displayName']);
-                
+                 
                         $result = $bot->replyMessage($event['replyToken'], $greetings);
                         $response->getBody()->write(json_encode($result->getJSONDecodedBody()));
                         return $response
                             ->withHeader('Content-Type', 'application/json')
                             ->withStatus($result->getHTTPStatus());
-                    }
-                    else {
-                        //message from single user
-                        $result = $bot->replyText($event['replyToken'], $event['message']['text']);
-                        $response->getBody()->write((string)$result->getJSONDecodedBody());
-                        return $response
-                            ->withHeader('Content-Type', 'application/json')
-                            ->withStatus($result->getHTTPStatus());
-                    }
-                } 
+                    }        
+                   } else {
+                    //message from single user
+                    $result = $bot->replyText($event['replyToken'], $event['message']['text']);
+                    $response->getBody()->write((string)$result->getJSONDecodedBody());
+                    return $response
+                        ->withHeader('Content-Type', 'application/json')
+                        ->withStatus($result->getHTTPStatus());
+                   }
+            
+                }
+        
             //Content api
             elseif (
                 $event['message']['type'] == 'image' or
@@ -102,8 +109,9 @@ if(is_array($data['events'])){
                     ->withHeader('Content-Type', 'application/json')
                     ->withStatus($result->getHTTPStatus());
             } 
-            
-        }
+       
+        } 
+        
     }
   }
 });
