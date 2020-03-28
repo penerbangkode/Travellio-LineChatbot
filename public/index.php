@@ -114,7 +114,7 @@ $app->get('/multicast', function($req, $response) use ($bot)
 $app->get('/profile', function ($req, $response) use ($bot)
 {
     // get user profile
-    $userId = 'Isi dengan userID Anda';
+    $userId = 'U7d3eeaa45810350d98ab265aeb5ab408';
     $result = $bot->getProfile($userId);
  
     $response->getBody()->write(json_encode($result->getJSONDecodedBody()));
