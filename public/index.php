@@ -59,8 +59,6 @@ if(is_array($data['events'])){
         if ($event['type'] == 'message')
         {
             
-            if ($event['type'] == 'message')
-            {
                   
      
                    //group room
@@ -89,21 +87,37 @@ if(is_array($data['events'])){
      
                             $result = $bot->replyText($event['replyToken'], $event['source']['userId']);
      
-                        } elseif (strtolower($event['message']['text']) == 'flex message') {
+                        } elseif (strtolower($event['message']['text']) == "Menu") {
      
-                            $flexTemplate = file_get_contents("../flex_message.json"); // template flex message
+                            $flexTemplate = file_get_contents("../menu.json"); // template flex message
                             $result = $httpClient->post(LINEBot::DEFAULT_ENDPOINT_BASE . '/v2/bot/message/reply', [
                                 'replyToken' => $event['replyToken'],
                                 'messages'   => [
                                     [
                                         'type'     => 'flex',
-                                        'altText'  => 'Test Flex Message',
+                                        'altText'  => 'What can I do for you?',
                                         'contents' => json_decode($flexTemplate)
                                     ]
                                 ],
                             ]);
+
+                            
+                    } 
+                    elseif (strtolower($event['message']['text']) == "About") {
      
-                    } else {
+                        $flexTemplate = file_get_contents("../about.json"); // template flex message
+                        $result = $httpClient->post(LINEBot::DEFAULT_ENDPOINT_BASE . '/v2/bot/message/reply', [
+                            'replyToken' => $event['replyToken'],
+                            'messages'   => [
+                                [
+                                    'type'     => 'flex',
+                                    'altText'  => 'Abou us ----> Trust me',
+                                    'contents' => json_decode($flexTemplate)
+                                ]
+                            ],
+                        ]);
+                    }
+                    else {
                         // send same message as reply to user
                         $result = $bot->replyText($event['replyToken'], $event['message']['text']);
                     }
@@ -116,6 +130,20 @@ if(is_array($data['events'])){
             
                 }
             }   
+            elseif (strtolower($event['message']['text']) == "Help") {
+     
+                $flexTemplate = file_get_contents("../help.json"); // template flex message
+                $result = $httpClient->post(LINEBot::DEFAULT_ENDPOINT_BASE . '/v2/bot/message/reply', [
+                    'replyToken' => $event['replyToken'],
+                    'messages'   => [
+                        [
+                            'type'     => 'flex',
+                            'altText'  => 'Hey, look at this menu, and how are you?',
+                            'contents' => json_decode($flexTemplate)
+                        ]
+                    ],
+                ]);
+            }
             //Content api
             elseif (
                 $event['message']['type'] == 'image' or
@@ -136,7 +164,7 @@ if(is_array($data['events'])){
         } 
         
     }
-  }
+  
 });
 $app->get('/pushmessage', function ($req, $response) use ($bot) {
     // send push message to user
