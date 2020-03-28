@@ -72,7 +72,7 @@ if(is_array($data['events'])){
                         $userId = $event['source']['userId'];
                         $getprofile = $bot->getProfile($userId);
                         $profile = $getprofile->getJSONDecodedBody();
-                        $greetings = new TextMessageBuilder("Halo, " . $profile['displayName'] ."Jika ada pertanyaan seputar pejalanan, bisa chat disini atau langsung kunjungi web site nya");
+                        $greetings = new TextMessageBuilder("Halo, " . $profile['displayName'] ." "."Jika ada pertanyaan seputar pejalanan, bisa chat disini atau langsung kunjungi web site nya");
                         
                         
 
@@ -165,8 +165,19 @@ if(is_array($data['events'])){
                     } 
                     else {
                         // send same message as reply to user
-                        $result = $bot->replyText($event['replyToken'], $event['message']['text']);
+                        $greetings = new TextMessageBuilder("Halo, " . $profile['displayName'] ." "."Jika ada pertanyaan seputar pejalanan, bisa chat disini atau langsung kunjungi web site nya, Mari mulai dengan mengetik Help");
+                        
+                        
+
+                            
+                 
+                        $result = $bot->replyMessage($event['replyToken'], $greetings);
+                        $response->getBody()->write(json_encode($result->getJSONDecodedBody()));
+                        return $response
+                            ->withHeader('Content-Type', 'application/json')
+                            ->withStatus($result->getHTTPStatus());
                     }
+
                     $result = $bot->replyText($event['replyToken'], $event['message']['text']);
                     $response->getBody()->write((string)$result->getJSONDecodedBody());
                     return $response
