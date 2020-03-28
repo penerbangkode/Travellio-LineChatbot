@@ -123,7 +123,21 @@ if(is_array($data['events'])){
                             'messages'   => [
                                 [
                                     'type'     => 'flex',
-                                    'altText'  => 'Hey, look at this menu, and how are you?',
+                                    'altText'  => 'Commands/prefix',
+                                    'contents' => json_decode($flexTemplate)
+                                ]
+                            ],
+                        ]);
+                    }
+                    elseif (strtolower($event['message']['text']) == "list") {
+     
+                        $flexTemplate = file_get_contents("../list.json"); // template flex message
+                        $result = $httpClient->post(LINEBot::DEFAULT_ENDPOINT_BASE . '/v2/bot/message/reply', [
+                            'replyToken' => $event['replyToken'],
+                            'messages'   => [
+                                [
+                                    'type'     => 'flex',
+                                    'altText'  => 'Waw, we have special discount for you!',
                                     'contents' => json_decode($flexTemplate)
                                 ]
                             ],

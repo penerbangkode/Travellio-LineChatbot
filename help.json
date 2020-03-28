@@ -39,11 +39,11 @@
         },
         {
           "type": "text",
-          "text": " bisa dikunjungi"
+          "text": "bisa dikunjungi"
         },
         {
           "type": "text",
-          "text": "1. About",
+          "text": "2. About",
           "margin": "lg",
           "weight": "bold"
         },
@@ -58,7 +58,7 @@
         },
         {
           "type": "text",
-          "text": "1. Help",
+          "text": "3. Help",
           "margin": "lg",
           "weight": "bold"
         },

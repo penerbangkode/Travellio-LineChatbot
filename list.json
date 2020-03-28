@@ -1,0 +1,647 @@
+{
+    "type": "carousel",
+    "contents": [
+      {
+        "type": "bubble",
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "box",
+              "layout": "horizontal",
+              "contents": [
+                {
+                  "type": "image",
+                  "url": "https://cdn01.tiket.photos/img/business/v/i/business-villatjokro-hotel-2127.jpg",
+                  "size": "5xl",
+                  "aspectMode": "cover",
+                  "aspectRatio": "150:196",
+                  "gravity": "center",
+                  "flex": 1
+                },
+                {
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": [
+                    {
+                      "type": "image",
+                      "url": "https://pix10.agoda.net/hotelImages/665/665682/665682_14062615500020050646.jpg",
+                      "size": "full",
+                      "aspectMode": "cover",
+                      "aspectRatio": "150:98",
+                      "gravity": "center"
+                    },
+                    {
+                      "type": "image",
+                      "url": "https://i.misteraladin.com/ad-hotel-photos/hotel/0000223000/0000222840/665682_14062516500020032174.jpg",
+                      "size": "full",
+                      "aspectMode": "cover",
+                      "aspectRatio": "150:98",
+                      "gravity": "center"
+                    }
+                  ],
+                  "flex": 1
+                }
+              ]
+            },
+            {
+              "type": "box",
+              "layout": "horizontal",
+              "contents": [
+                {
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": [
+                    {
+                      "type": "image",
+                      "url": "https://travellio.herokuapp.com/img/c1.jpg",
+                      "aspectMode": "cover",
+                      "size": "full"
+                    }
+                  ],
+                  "cornerRadius": "100px",
+                  "width": "72px",
+                  "height": "72px"
+                },
+                {
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "contents": [
+                        {
+                          "type": "span",
+                          "text": "Pulau Bidadari",
+                          "weight": "bold",
+                          "color": "#000000"
+                        },
+                        {
+                          "type": "span",
+                          "text": "     "
+                        },
+                        {
+                          "type": "span",
+                          "text": "merupakan salah satu resort di Kabupaten Kepulauan Seribu, Jakarta."
+                        }
+                      ],
+                      "size": "sm",
+                      "wrap": true
+                    },
+                    {
+                      "type": "box",
+                      "layout": "baseline",
+                      "contents": [
+                        {
+                          "type": "icon",
+                          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                        },
+                        {
+                          "type": "icon",
+                          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                        },
+                        {
+                          "type": "icon",
+                          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                        },
+                        {
+                          "type": "icon",
+                          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                        },
+                        {
+                          "type": "icon",
+                          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gray_star_28.png"
+                        },
+                        {
+                          "type": "text",
+                          "text": "4.0",
+                          "color": "#a9a9a9"
+                        }
+                      ],
+                      "spacing": "xs"
+                    }
+                  ]
+                }
+              ],
+              "spacing": "xl",
+              "paddingAll": "20px"
+            },
+            {
+              "type": "text",
+              "text": "Fasilitas :",
+              "weight": "bold",
+              "contents": [
+                {
+                  "type": "span",
+                  "text": "Fasilitas : "
+                }
+              ],
+              "align": "start",
+              "offsetStart": "25px"
+            },
+            {
+              "type": "text",
+              "weight": "regular",
+              "contents": [
+                {
+                  "type": "span",
+                  "text": "1. Villa (5 Kamar)",
+                  "size": "md"
+                }
+              ],
+              "align": "start",
+              "offsetStart": "25px",
+              "margin": "sm"
+            },
+            {
+              "type": "text",
+              "weight": "regular",
+              "contents": [
+                {
+                  "type": "span",
+                  "text": "2. Kapal (10 Orang)",
+                  "size": "md"
+                }
+              ],
+              "align": "start",
+              "offsetStart": "25px",
+              "margin": "sm"
+            },
+            {
+              "type": "text",
+              "weight": "regular",
+              "contents": [
+                {
+                  "type": "span",
+                  "text": "3. Banana Boat",
+                  "size": "md"
+                }
+              ],
+              "align": "start",
+              "offsetStart": "25px",
+              "margin": "sm"
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "button",
+                  "action": {
+                    "type": "uri",
+                    "label": "BOOK",
+                    "uri": "https://api.whatsapp.com/send?phone=6289695353556&text=Halo%20Min,%20harga%20travel%20ke%20Pulau%20Bidadari%20berapa?",
+                    "altUri": {
+                      "desktop": "https://api.whatsapp.com/send?phone=6289695353556&text=Halo%20Min,%20harga%20travel%20ke%20Pulau%20Bidadari%20berapa?"
+                    }
+                  },
+                  "color": "#ffffff",
+                  "height": "md"
+                }
+              ],
+              "margin": "md",
+              "action": {
+                "type": "uri",
+                "label": "Book",
+                "uri": "https://api.whatsapp.com/send?phone=6289695353556&text=Halo%20Min,%20harga%20travel%20ke%20Pulau%20Bidadari%20berapa?",
+                "altUri": {
+                  "desktop": "https://api.whatsapp.com/send?phone=6289695353556&text=Halo%20Min,%20harga%20travel%20ke%20Pulau%20Bidadari%20berapa?"
+                }
+              },
+              "backgroundColor": "#5bc0de"
+            }
+          ],
+          "paddingAll": "0px"
+        }
+      },
+      {
+        "type": "bubble",
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "box",
+              "layout": "horizontal",
+              "contents": [
+                {
+                  "type": "image",
+                  "url": "https://q-cf.bstatic.com/images/hotel/max1024x768/181/181921688.jpg",
+                  "size": "5xl",
+                  "aspectMode": "cover",
+                  "aspectRatio": "150:196",
+                  "gravity": "center",
+                  "flex": 1
+                },
+                {
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": [
+                    {
+                      "type": "image",
+                      "url": "https://r-cf.bstatic.com/images/hotel/max1024x768/152/152915172.jpg",
+                      "size": "full",
+                      "aspectMode": "cover",
+                      "aspectRatio": "150:98",
+                      "gravity": "center"
+                    },
+                    {
+                      "type": "image",
+                      "url": "https://media-cdn.tripadvisor.com/media/vr-splice-j/05/b2/80/c5.jpg",
+                      "size": "full",
+                      "aspectMode": "cover",
+                      "aspectRatio": "150:98",
+                      "gravity": "center"
+                    }
+                  ],
+                  "flex": 1
+                }
+              ]
+            },
+            {
+              "type": "box",
+              "layout": "horizontal",
+              "contents": [
+                {
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": [
+                    {
+                      "type": "image",
+                      "url": "https://travellio.herokuapp.com/img/c2.jpg",
+                      "aspectMode": "cover",
+                      "size": "full"
+                    }
+                  ],
+                  "cornerRadius": "100px",
+                  "width": "72px",
+                  "height": "72px"
+                },
+                {
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "contents": [
+                        {
+                          "type": "span",
+                          "text": "Pulau Sepa",
+                          "weight": "bold",
+                          "color": "#000000"
+                        },
+                        {
+                          "type": "span",
+                          "text": "     "
+                        },
+                        {
+                          "type": "span",
+                          "text": "merupakan salah satu resort yang terdapat di pulau Seribu Jakarta."
+                        }
+                      ],
+                      "size": "sm",
+                      "wrap": true
+                    },
+                    {
+                      "type": "box",
+                      "layout": "baseline",
+                      "contents": [
+                        {
+                          "type": "icon",
+                          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                        },
+                        {
+                          "type": "icon",
+                          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                        },
+                        {
+                          "type": "icon",
+                          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                        },
+                        {
+                          "type": "icon",
+                          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                        },
+                        {
+                          "type": "icon",
+                          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                        },
+                        {
+                          "type": "text",
+                          "text": "5.0",
+                          "color": "#a9a9a9"
+                        }
+                      ],
+                      "spacing": "xs"
+                    }
+                  ]
+                }
+              ],
+              "spacing": "xl",
+              "paddingAll": "20px"
+            },
+            {
+              "type": "text",
+              "text": "Fasilitas :",
+              "weight": "bold",
+              "contents": [
+                {
+                  "type": "span",
+                  "text": "Fasilitas : "
+                }
+              ],
+              "align": "start",
+              "offsetStart": "25px"
+            },
+            {
+              "type": "text",
+              "weight": "regular",
+              "contents": [
+                {
+                  "type": "span",
+                  "text": "1. Villa (5 Kamar)",
+                  "size": "md"
+                }
+              ],
+              "align": "start",
+              "offsetStart": "25px",
+              "margin": "sm"
+            },
+            {
+              "type": "text",
+              "weight": "regular",
+              "contents": [
+                {
+                  "type": "span",
+                  "text": "2. Kapal (20 Orang)",
+                  "size": "md"
+                }
+              ],
+              "align": "start",
+              "offsetStart": "25px",
+              "margin": "sm"
+            },
+            {
+              "type": "text",
+              "weight": "regular",
+              "contents": [
+                {
+                  "type": "span",
+                  "text": "3. Semua wahana",
+                  "size": "md"
+                }
+              ],
+              "align": "start",
+              "offsetStart": "25px",
+              "margin": "sm"
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "button",
+                  "action": {
+                    "type": "uri",
+                    "label": "BOOK",
+                    "uri": "https://api.whatsapp.com/send?phone=6289695353556&text=Halo%20Min,%20harga%20travel%20ke%20Pulau%20Sepa%20berapa?",
+                    "altUri": {
+                      "desktop": "https://api.whatsapp.com/send?phone=6289695353556&text=Halo%20Min,%20harga%20travel%20ke%20Pulau%20Sepa%20berapa?"
+                    }
+                  },
+                  "color": "#ffffff",
+                  "height": "md"
+                }
+              ],
+              "margin": "md",
+              "action": {
+                "type": "uri",
+                "label": "Book",
+                "uri": "https://api.whatsapp.com/send?phone=6289695353556&text=Halo%20Min,%20harga%20travel%20ke%20Pulau%20Bidadari%20berapa?",
+                "altUri": {
+                  "desktop": "https://api.whatsapp.com/send?phone=6289695353556&text=Halo%20Min,%20harga%20travel%20ke%20Pulau%20Bidadari%20berapa?"
+                }
+              },
+              "backgroundColor": "#5bc0de"
+            }
+          ],
+          "paddingAll": "0px"
+        }
+      },
+      {
+        "type": "bubble",
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "box",
+              "layout": "horizontal",
+              "contents": [
+                {
+                  "type": "image",
+                  "url": "https://rumahdijual.com/attachments/bali/1012767d1392686967-2-bedroom-modern-minimalist-villa-2-bedroom-modern-minimalist-villa-1.jpg",
+                  "size": "5xl",
+                  "aspectMode": "cover",
+                  "aspectRatio": "150:196",
+                  "gravity": "center",
+                  "flex": 1
+                },
+                {
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": [
+                    {
+                      "type": "image",
+                      "url": "https://www.theluxuryaddress.com/wp-content/uploads/2018/07/modern-minimalist-3-bedroom-luxury-villa-img-21.jpg",
+                      "size": "full",
+                      "aspectMode": "cover",
+                      "aspectRatio": "150:98",
+                      "gravity": "center"
+                    },
+                    {
+                      "type": "image",
+                      "url": "https://mk0travelawayrru2xew.kinstacdn.com/wp-content/uploads/2019/02/minimalist-bedroom-sv.jpg",
+                      "size": "full",
+                      "aspectMode": "cover",
+                      "aspectRatio": "150:98",
+                      "gravity": "center"
+                    }
+                  ],
+                  "flex": 1
+                }
+              ]
+            },
+            {
+              "type": "box",
+              "layout": "horizontal",
+              "contents": [
+                {
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": [
+                    {
+                      "type": "image",
+                      "url": "https://travellio.herokuapp.com/img/c0.jpg",
+                      "aspectMode": "cover",
+                      "size": "full"
+                    }
+                  ],
+                  "cornerRadius": "100px",
+                  "width": "72px",
+                  "height": "72px"
+                },
+                {
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "contents": [
+                        {
+                          "type": "span",
+                          "text": "Pulau Ayer",
+                          "weight": "bold",
+                          "color": "#000000"
+                        },
+                        {
+                          "type": "span",
+                          "text": "     "
+                        },
+                        {
+                          "type": "span",
+                          "text": "merupakan pulau yang berada dalam gugusan Kepulauan Seribu."
+                        }
+                      ],
+                      "size": "sm",
+                      "wrap": true
+                    },
+                    {
+                      "type": "box",
+                      "layout": "baseline",
+                      "contents": [
+                        {
+                          "type": "icon",
+                          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                        },
+                        {
+                          "type": "icon",
+                          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                        },
+                        {
+                          "type": "icon",
+                          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                        },
+                        {
+                          "type": "icon",
+                          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
+                        },
+                        {
+                          "type": "icon",
+                          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gray_star_28.png"
+                        },
+                        {
+                          "type": "text",
+                          "text": "4.0",
+                          "color": "#a9a9a9"
+                        }
+                      ],
+                      "spacing": "xs"
+                    }
+                  ]
+                }
+              ],
+              "spacing": "xl",
+              "paddingAll": "20px"
+            },
+            {
+              "type": "text",
+              "text": "Fasilitas :",
+              "weight": "bold",
+              "contents": [
+                {
+                  "type": "span",
+                  "text": "Fasilitas : "
+                }
+              ],
+              "align": "start",
+              "offsetStart": "25px"
+            },
+            {
+              "type": "text",
+              "weight": "regular",
+              "contents": [
+                {
+                  "type": "span",
+                  "text": "1. Villa (3 Kamar)",
+                  "size": "md"
+                }
+              ],
+              "align": "start",
+              "offsetStart": "25px",
+              "margin": "sm"
+            },
+            {
+              "type": "text",
+              "weight": "regular",
+              "contents": [
+                {
+                  "type": "span",
+                  "text": "2. Kapal (5 Orang)",
+                  "size": "md"
+                }
+              ],
+              "align": "start",
+              "offsetStart": "25px",
+              "margin": "sm"
+            },
+            {
+              "type": "text",
+              "weight": "regular",
+              "contents": [
+                {
+                  "type": "span",
+                  "text": "3. Banana Boat",
+                  "size": "md"
+                }
+              ],
+              "align": "start",
+              "offsetStart": "25px",
+              "margin": "sm"
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "button",
+                  "action": {
+                    "type": "uri",
+                    "label": "BOOK",
+                    "uri": "https://api.whatsapp.com/send?phone=6289695353556&text=Halo%20Min,%20harga%20travel%20ke%20Pulau%20Ayer%20berapa?",
+                    "altUri": {
+                      "desktop": "https://api.whatsapp.com/send?phone=6289695353556&text=Halo%20Min,%20harga%20travel%20ke%20Pulau%20Ayer%20berapa?"
+                    }
+                  },
+                  "color": "#ffffff",
+                  "height": "md"
+                }
+              ],
+              "margin": "md",
+              "action": {
+                "type": "uri",
+                "label": "Book",
+                "uri": "https://api.whatsapp.com/send?phone=6289695353556&text=Halo%20Min,%20harga%20travel%20ke%20Pulau%20Bidadari%20berapa?",
+                "altUri": {
+                  "desktop": "https://api.whatsapp.com/send?phone=6289695353556&text=Halo%20Min,%20harga%20travel%20ke%20Pulau%20Bidadari%20berapa?"
+                }
+              },
+              "backgroundColor": "#5bc0de"
+            }
+          ],
+          "paddingAll": "0px"
+        }
+      }
+    ]
+  }
