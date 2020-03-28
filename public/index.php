@@ -125,8 +125,7 @@ if(is_array($data['events'])){
             }
         }
     }
-
-}
+  }
 });
 $app->get('/pushmessage', function ($req, $response) use ($bot) {
     // send push message to user
