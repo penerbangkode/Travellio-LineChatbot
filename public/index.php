@@ -87,7 +87,7 @@ if(is_array($data['events'])){
      
                             $result = $bot->replyText($event['replyToken'], $event['source']['userId']);
      
-                        } elseif (strtolower($event['message']['text']) == "Menu") {
+                        } elseif (strtolower($event['message']['text']) == "menu") {
      
                             $flexTemplate = file_get_contents("../menu.json"); // template flex message
                             $result = $httpClient->post(LINEBot::DEFAULT_ENDPOINT_BASE . '/v2/bot/message/reply', [
@@ -100,10 +100,8 @@ if(is_array($data['events'])){
                                     ]
                                 ],
                             ]);
-
-                            
-                    } 
-                    elseif (strtolower($event['message']['text']) == "About") {
+                         } 
+                    elseif (strtolower($event['message']['text']) == "about") {
      
                         $flexTemplate = file_get_contents("../about.json"); // template flex message
                         $result = $httpClient->post(LINEBot::DEFAULT_ENDPOINT_BASE . '/v2/bot/message/reply', [
@@ -111,13 +109,13 @@ if(is_array($data['events'])){
                             'messages'   => [
                                 [
                                     'type'     => 'flex',
-                                    'altText'  => 'Abou us ----> Trust me',
+                                    'altText'  => 'About us ----> Trust me',
                                     'contents' => json_decode($flexTemplate)
                                 ]
                             ],
                         ]);
                     }
-                    elseif (strtolower($event['message']['text']) == "Help") {
+                    elseif (strtolower($event['message']['text']) == "help") {
      
                         $flexTemplate = file_get_contents("../help.json"); // template flex message
                         $result = $httpClient->post(LINEBot::DEFAULT_ENDPOINT_BASE . '/v2/bot/message/reply', [
