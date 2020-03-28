@@ -73,7 +73,7 @@ if(is_array($data['events'])){
                         $getprofile = $bot->getProfile($userId);
                         $profile = $getprofile->getJSONDecodedBody();
                         
-                        if (strtolower($event['message']['text'] == 'Halo' || 'Selamat' || 'Pagi' || 'Hello')) {
+                        if (strtolower($event['message']['text'] == 'halo' || 'selamat' || 'pagi' || 'hello')) {
                             $greetings = new TextMessageBuilder("Halo, " . $profile['displayName'] ."");
                             $result = $bot->replyMessage($event['replyToken'], $greetings);
 
