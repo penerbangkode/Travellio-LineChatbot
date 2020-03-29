@@ -15,8 +15,8 @@ use \LINE\LINEBot\SignatureValidator as SignatureValidator;
 $pass_signature = true;
  
 // set LINE channel_access_token and channel_secret
-$channel_access_token = "FtReaW9mrUPCi9BQnrq8puCDaT7YMrlzsqy0duUird3uUlBQn1A/LwTpLm0A/7t4vOU9YZjAcXhro38J0dwbp1AEYUN6FVfX39BSpKmyjXVpq1X4R9El3v+qO4yjBKRvWUR8xgtvlbqor1xauuIuxwdB04t89/1O/w1cDnyilFU=";
-$channel_secret = "5c667b5b9931422fcded190428ac32dc";
+$channel_access_token = "";
+$channel_secret = "";
  
 // inisiasi objek bot
 $httpClient = new CurlHTTPClient($channel_access_token);
@@ -72,7 +72,7 @@ if(is_array($data['events'])){
                         $userId = $event['source']['userId'];
                         $getprofile = $bot->getProfile($userId);
                         $profile = $getprofile->getJSONDecodedBody();
-                        $greetings = new TextMessageBuilder("Halo, " . $profile['displayName'] ." "."Jika ada pertanyaan seputar pejalanan, bisa chat disini atau langsung kunjungi web site nya");
+                        $greetings = new TextMessageBuilder("Halo, " . $profile['displayName'] ." "."Jika ada pertanyaan seputar pejalanan, bisa chat aku langsung atau langsung kunjungi web site nya");
                         
                         
 
@@ -210,8 +210,6 @@ $app->get('/multicast', function($req, $response) use ($bot)
 {
     // list of users
     $userList = [
-        'U7d3eeaa45810350d98ab265aeb5ab408',
-        'U09b114f06c3918e86c541686d276d364',
         'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
         'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
         'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'];
